@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "wikipedia-content-analyzer-backend"
+version = "0.1.0"
+description = "Backend for Wikipedia Content Analyzer"
+authors = ["Leandro Sepulveda <leandro.sepulveda@gmail.com>"]
+packages = [{include = "app"}]
+
+[tool.poetry.dependencies]
+python = "^3.13"
+fastapi = "^0.111.0"
+uvicorn = {extras = ["standard"], version = "^0.30.1"}
+sqlalchemy = "^2.0.30"
+psycopg2-binary = "^2.9.9"
+pydantic = {extras = ["email"], version = "^2.7.1"}
+python-jose = {extras = ["cryptography"], version = "^3.3.0"} # For potential future auth
+passlib = {extras = ["bcrypt"], version = "^1.7.4"} # For potential future auth
+python-multipart = "^0.0.9" # For form data, though not directly used here
+alembic = "^1.13.1"
+python-decouple = "^3.8" # For environment variables
+nltk = "^3.8.1" # For text analysis (stopwords)
+# uvloop = "^0.19.0"
+httptools = "^0.6.1"
+pydantic-settings = "^2.9.1"
+wikipedia = "^1.4.0"
+textblob = "^0.19.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.1"
+pytest-asyncio = "^0.23.0"
+mypy = "^1.10.0"
+black = "^24.4.2"
+isort = "^5.13.2"
+flake8 = "^7.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

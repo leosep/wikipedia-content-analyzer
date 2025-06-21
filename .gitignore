@@ -1,0 +1,39 @@
+# .gitignore
+
+# Node modules
+/frontend/node_modules
+/frontend/dist
+/frontend/.env
+/frontend/.vite/
+
+# Python environment
+/backend/.venv
+/backend/__pycache__/
+/backend/.pytest_cache/
+/backend/.mypy_cache/
+/backend/.ruff_cache/
+/backend/.env
+
+# Database files (for SQLite, if used for local testing)
+/backend/*.db
+/backend/*.db-journal
+
+# Alembic
+/backend/migrations/versions/
+
+# Docker
+.dockerignore
+
+# IDE specific files
+.idea/
+.vscode/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db

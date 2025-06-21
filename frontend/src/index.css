@@ -1,0 +1,263 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+h1, h2, h3 {
+  color: #2c3e50;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #34495e;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #2c3e50;
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar {
+  margin-bottom: 2rem;
+}
+
+.search-bar input[type="text"] {
+  width: 80%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.article-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.article-card {
+  background-color: #e8f0fe;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #d0e6fb;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  text-align: left;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.article-card h3 {
+  margin-top: 0;
+  color: #2980b9;
+}
+
+.article-card p {
+  color: #555;
+  font-size: 0.9em;
+}
+
+.article-detail {
+  text-align: left;
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+.article-detail h2 {
+  color: #2980b9;
+}
+
+.article-detail a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.article-detail a:hover {
+  text-decoration: underline;
+}
+
+.article-detail p {
+  line-height: 1.6;
+  color: #444;
+}
+
+.article-detail button {
+  background-color: #27ae60;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.article-detail button:hover {
+  background-color: #229a53;
+}
+
+.article-detail button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.personal-notes textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  min-height: 80px;
+  box-sizing: border-box; 
+}
+
+.saved-articles-list {
+  margin-top: 2rem;
+}
+
+.saved-article-item {
+  background-color: #f0f8ff;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #cfe2f3;
+  text-align: left;
+}
+
+.saved-article-item h3 {
+  color: #2c3e50;
+  margin-top: 0;
+}
+
+.saved-article-item .delete-button {
+  background-color: #e74c3c;
+  margin-top: 1rem;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+}
+
+.saved-article-item .delete-button:hover {
+  background-color: #c0392b;
+}
+
+.saved-article-item button {
+  background-color: #3498db;
+  color: white;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.saved-article-item button:hover {
+  background-color: #217dbb;
+}
+
+.saved-article-item button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; 
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top-color: #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .search-bar input[type="text"] {
+    width: 95%;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
