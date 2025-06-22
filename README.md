@@ -1,4 +1,4 @@
-# Analizador de Contenido de Wikipedia
+4# Analizador de Contenido de Wikipedia
 
 Este proyecto consiste en una aplicación que permite buscar artículos en Wikipedia, analizarlos (conteo de palabras, palabras frecuentes, análisis de sentimiento) y guardar artículos con notas personalizadas en una base de datos. Está construido con un backend en FastAPI (Python) y un frontend en React (TypeScript).
 
@@ -68,7 +68,7 @@ Para configurar y ejecutar este proyecto en un entorno Windows (o cualquier otro
 
 ### 2. Decisiones de Diseño y Arquitectura
 
-El proyecto sigue una arquitectura de microservicios con un backend API RESTful y un frontend de una sola página.
+El proyecto sigue una rquitectura cliente-servidor con un backend monolítico API y un frontend de una sola página (SPA).
 
 * **Backend (Python/FastAPI):**
     * **FastAPI:** Elegido por su alto rendimiento y facilidad de uso.
