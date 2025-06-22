@@ -1,4 +1,4 @@
-4# Analizador de Contenido de Wikipedia
+# Analizador de Contenido de Wikipedia
 
 Este proyecto consiste en una aplicación que permite buscar artículos en Wikipedia, analizarlos (conteo de palabras, palabras frecuentes, análisis de sentimiento) y guardar artículos con notas personalizadas en una base de datos. Está construido con un backend en FastAPI (Python) y un frontend en React (TypeScript).
 
